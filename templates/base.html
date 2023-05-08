@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>{% block title %}My Site{% endblock %}</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha256-5v5l5m6w5u1sSTtQsZtjsgNt4Y4X/RYpTEC13yMwBcI=" crossorigin="anonymous" />
+    {% block styles %}
+    {% endblock %}
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="{% url 'home' %}">Home</a></li>
+            <li><a href="{% url 'client-list' %}">Clients</a></li>
+            <li><a href="{% url 'car-list' %}">Cars</a></li>
+            <li><a href="{% url 'service-list' %}">Services</a></li>
+            <li><a href="{% url 'order-list' %}">Orders</a></li>
+        </ul>
+    </nav>
+    {% block content %}
+    {% endblock %}
+    <footer>
+        &copy; My Site 2023
+    </footer>
+    {% block scripts %}
+    {% endblock %}
+</body>
+</html>
